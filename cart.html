@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart | LOSTZ</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 40px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: px;
+      margin-bottom: 40px;
+    }
+
+    .cart-container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #111;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cart-item img {
+      width: 100px;
+      border-radius: 8px;
+    }
+
+    .cart-info {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .cart-info h3 {
+      margin: 0 0 5px;
+    }
+
+    .cart-info p {
+      margin: 3px 0;
+      color: #aaa;
+    }
+
+    .remove-btn {
+      background-color: #ff4444;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .checkout {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .checkout-btn {
+      display: inline-block;
+      background-color: #fff;
+      color: #000;
+      padding: 14px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .checkout-btn:hover {
+      background-color: #ccc;
+    }
+
+    .empty {
+      text-align: center;
+      font-size: 18px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Cart</h1>
+
+  <div class="cart-container" id="cart"></div>
+
+  <div class="checkout" id="checkout" style="display: none;">
+    <a href="#" id="checkoutBtn" class="checkout-btn">Checkout via WhatsApp</a>
+  </div>
+
+  <script>
+    const cartContainer = document.getElementById("cart");
+    const checkoutSection = document.getElementById("checkout");
+
+    let cart = JSON.parse(localStorage.getItem("lostz_cart")) || [];
+
+    function renderCart() {
+      if (cart.length === 0) {
+        cartContainer.innerHTML = '<p class="empty">Your cart is empty.</p>';
+        checkoutSection.style.display = 'none';
+        return;
+      }
+
+      cartContainer.innerHTML = "";
+      let message = "LOSTZ Order:%0A";
+
+      cart.forEach((item, index) => {
+        const itemHTML = `
+          <div class="cart-item">
+            <img src="${item.image}" alt="${item.name}">
+            <div class="cart-info">
+              <h3>${item.name}</h3>
+              <p>Size: ${item.size}</p>
+              <p>Price: EGP ${item.price}</p>
+              <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+            </div>
+          </div>
+        `;
+        cartContainer.innerHTML += itemHTML;
+
+        message += `• ${item.name} - ${item.size} - EGP ${item.price}%0A`;
+      });
+
+      message += `%0ATotal: EGP ${cart.reduce((t, i) => t + i.price, 0)}`;
+      const whatsappLink = `https://wa.me/201114418568?text=${message}`; // replace with your number
+      document.getElementById("checkoutBtn").href = whatsappLink;
+      checkoutSection.style.display = 'block';
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("lostz_cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+
+    
+    renderCart();
+  </script>
+
+</body>
+</html>
+
+
+<a href="cart.html" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  color: #000;
+  padding: 12px 18px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #000;
+  z-index: 999;
+">
+  🛒 Cart
+</a>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LOSTZ Black Tee</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>LOSTZ</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  
+
+  <main class="product-detail">
+    <img src="images/black-tee.jpg" alt="LOSTZ Black Tee" class="product-image">
+
+    <div class="product-info">
+      <h2>LOSTZ Black Tee</h2>
+      <p class="price">EGP 700</p>
+      <p>Oversized fit. 100% cotton. Model is 178 cm wearing size L.</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LOSTZ Clothing</p>
+  </footer>
+</body>
+<div class="product-container">
+  <img src="https://instagram.fcai20-3.fna.fbcdn.net/v/t1.15752-9/517181081_723573420541976_7961800302015947642_n.jpg" alt="LOSTZ Boxy Basic" class="product-image">
+
+  <div class="product-info">
+    <h1>LOSTZ Boxy Basic</h1>
+    <p class="price">EGP 499</p>
+    <p>Boxy oversized fit with clean LOSTZ print. Heavyweight cotton for everyday Gen-Z flex.</p>
+
+    <label>Select Color:</label>
+    <div class="color-options">
+      <label class="color-swatch">
+        <input type="radio" name="color" value="Black" checked />
+        <span class="circle black"></span>
+      </label>
+      <label class="color-swatch">
+        <input type="radio" name="color" value="White" />
+        <span class="circle white"></span>
+      </label>
+    </div>
+
+    <label for="size">Select Size:</label>
+    <select id="size">
+      <option value="S">Small</option>
+      <option value="M">Medium</option>
+      <option value="L">Large</option>
+      <option value="XL">Extra Large</option>
+    </select>
+
+    <button class="btn" onclick="addToCart()">Add to Cart</button>
+    <div class="message" id="message"></div>
+  </div>
+</div>
+
+</html>
+

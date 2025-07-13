@@ -1,0 +1,137 @@
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>LOSTZ Boxy Basic</title>
+      <style>
+        body {
+          margin: 0;
+          background-color: #000;
+          color: #fff;
+          font-family: Arial, sans-serif;
+          padding: 40px 20px;
+        }
+    
+        .product-container {
+          max-width: 900px;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 40px;
+          align-items: center;
+          justify-content: center;
+        }
+    
+        .product-container img {
+          max-width: 400px;
+          width: 100%;
+          border-radius: 10px;
+        }
+    
+        .product-info {
+          max-width: 400px;
+        }
+    
+        .product-info h1 {
+          font-size: 32px;
+          margin-bottom: 10px;
+        }
+    
+        .product-info p.price {
+          font-size: 20px;
+          color: #aaa;
+          margin-bottom: 20px;
+        }
+    
+        select {
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          font-size: 16px;
+          width: 100%;
+        }
+    
+        .btn {
+          display: inline-block;
+          background-color: #fff;
+          color: #000;
+          padding: 12px 24px;
+          border-radius: 5px;
+          font-weight: bold;
+          text-decoration: none;
+          cursor: pointer;
+          width: 100%;
+          text-align: center;
+        }
+    
+        .btn:hover {
+          background-color: #ccc;
+        }
+    
+        .message {
+          margin-top: 20px;
+          color: #0f0;
+          font-weight: bold;
+        }
+      </style>
+    </head>
+    <body>
+    
+      <div class="product-container">
+        <img src="https://i.pinimg.com/1200x/b6/2e/36/b62e36b0c410d7e5267e5fbf16aa3d64.jpg" alt="LOSTZ Boxy Basic">
+    
+        <div class="product-info">
+          <h1>LOSTZ Boxy Basic</h1>
+          <p class="price">EGP 499</p>
+          <p>white boxy fit printed</p>
+    
+          <label for="size">Select Size:</label>
+          <select id="size">
+            <option value="S">Small (S)</option>
+            <option value="M">Medium (M)</option>
+            <option value="L">Large (L)</option>
+            <option value="XL">Extra Large (XL)</option>
+          </select>
+    
+         
+
+      </div>
+    
+      <script>
+        function addToCart() {
+          const size = document.getElementById("size").value;
+          const product = {
+            name: "LOSTZ Boxy Basic",
+            price: 499,
+            size: size,
+            image: "https://i.pinimg.com/1200x/b6/2e/36/b62e36b0c410d7e5267e5fbf16aa3d64.jpg"
+          };
+    
+          let cart = JSON.parse(localStorage.getItem("lostz_cart")) || [];
+          cart.push(product);
+          localStorage.setItem("lostz_cart", JSON.stringify(cart));
+    
+          document.getElementById("message").textContent = "✅ Added to cart!";
+        }
+      </script>
+    
+    <a href="cart.html" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 18px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px #000;
+    z-index: 999;
+    ">
+    Cart
+    </a>
+
+    </body>
+    </html>
+    

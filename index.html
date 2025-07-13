@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <header>
+    
+    <title>LOSTZ | Menu</title>
+    
+    
+    <header class='header-syles'>
+        <a href="index.html">
+          <img 
+            src="https://scontent.fcai20-5.fna.fbcdn.net/v/t1.15752-9/516383747_1444256823665317_3945886527871030475_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=AmZUcL0OifMQ7kNvwHbUDCW&_nc_oc=AdmOczeZRPg4MqvLEDSPPCRImP4_aBfHotSUBWM2sadippbYVUHtu7M9MSsuXy6Bdfk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcai20-5.fna&oh=03_Q7cD2wEE_aiTlhoQxQ_ugFTjWte1hwLcuFWBTk8VFDPZ0IPonA&oe=6899F9D9" 
+            alt="LOSTZ Logo" 
+            width="100px"
+            height="80px"
+            
+          >
+        </a>
+  
+        <nav>
+                 <a href="index.html" class="btn">Home</a>
+                <a href="cart.html" class="btn">Cart</a> 
+                <a href="contact.html" class="btn">Contact</a>
+
+<body>
+
+  <script>
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        document.body.insertAdjacentHTML("afterbegin", `<p style="color:white;">👋 Welcome, ${user.email}</p>`);
+      }
+    });
+  </script>   
+
+</body>
+
+                
+                
+        </nav>  
+      </header>
+      <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+  </header>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="image image1"></div>
+    <div class="image image2"></div>
+    
+  </div>
+  <section class="hero">
+    <div class="background-images">
+      <div class="bg-img left"></div>
+      <div class="bg-img right"></div>
+    </div>
+  
+    <div class="hero-content">
+      <h2 style="color: black;">𝓛𝓞𝓢𝓣𝓩</h2>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </div>
+  </section>
+  
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LOSTZ Hero</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      background-image: url('images/hero-bg.jpg'); /* ✅ Change this to your image path */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #000;
+      padding: 14px 28px;
+      border-radius: 5px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: rgb(0, 0, 0);
+    }
+  </style>
+</head>
+<body>
+
+  
+<a href="cart.html" style="
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #fff;
+color: #000;
+padding: 12px 18px;
+border-radius: 40px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 0 10px #000;
+z-index: 999;
+">
+Cart
+</a>
+
+  
+</body>
+</html>
+
+
+  <section style="background-color: #000; color: #fff; padding: 60px 20px; font-family: Arial, sans-serif;">
+    <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px;">Our Products</h2>
+  
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: auto;">
+  
+      <!-- Product 1 -->
+      <div class="product-card" style="background-color: #111; padding: 20px; border-radius: 10px; width: 280px; text-align: center;">
+        <img src="https://i.pinimg.com/1200x/b6/2e/36/b62e36b0c410d7e5267e5fbf16aa3d64.jpg" alt="Lostz Cropped Tee" style="width: 100%; border-radius: 8px;">
+        <h3 style="margin-top: 15px;">boxy fit shirt</h3>
+        <p style="color: #aaa;">EGP 499</p>
+        <a href="boxy-fit.html" class="btn btn-small">Buy Now</a>
+
+      </div>
+  
+      <!-- Product 2 -->
+      <div class="product-card" style="background-color: #111; padding: 20px; border-radius: 10px; width: 280px; text-align: center;">
+        <img src="https://i.pinimg.com/1200x/ad/3d/7b/ad3d7bcb86a169a378cfe9740a4286b4.jpg" alt="Lostz Hoodie" style="width: 100%; border-radius: 8px;">
+        <h3 style="margin-top: 15px;">wide leg jeans</h3>
+        <p style="color: #aaa;">EGP 750</p>
+        <a href="product-jeans.html" style="display: inline-block; background-color: #fff; color: #000; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 10px;">Buy Now</a>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+  <footer style="background-color: #111; color: #fff; text-align: center; padding: 20px 0; font-family: Arial, sans-serif; font-size: 14px;">
+    <p style="margin: 0 0 10px;">&copy; 2025 <strong>LOSTZ</strong> Clothing. All rights reserved.</p>
+  
+    <div style="margin-top: 10px;">
+      <!-- Instagram SVG -->
+      <a href="https://www.instagram.com/lostz.eg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="margin: 0 15px; display: inline-block;">
+        <svg width="24" height="24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+        </svg>
+      </a>
+  
+      <a href="https://www.tiktok.com/@yourusername" target="_blank" style="margin: 0 15px; display: inline-block;">
+        <svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+          <path d="M41 16.46v6.66a18.1 18.1 0 0 1-10.49-3.31v13.18A10.9 10.9 0 1 1 20.3 22.4v6.64a4.25 4.25 0 1 0 6.21 3.77V6h6.66c.34 2.57 2.42 7.89 7.83 10.46Z"/>
+        </svg>
+      </a>
+      
+  </a>
+  
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+<style>
+    .product-card img {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  
+    .product-card:hover img {
+      transform: scale(1.05);
+      opacity: 0.85;
+    }
+  </style>
+  
+
+  <style>
+
